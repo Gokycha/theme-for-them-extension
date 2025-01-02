@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "Theme for them",
+    "icons": {
+        "16": "assets/imgs/icon.png",
+        "32": "assets/imgs/icon.png",
+        "48": "assets/imgs/icon.png",
+        "128": "assets/imgs/icon.png"
+    },
+    "version": "1.0",
+    "description": "Extension chỉnh sửa chủ đề trang web hiện tại.",
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://chatgpt.com/*"
+    ],
+    "background": {
+        "service_worker": "assets/js/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://chatgpt.com/*"
+            ],
+            "js": [
+                "assets/js/content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/imgs/icon.png",
+            "48": "assets/imgs/icon.png",
+            "128": "assets/imgs/icon.png"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
