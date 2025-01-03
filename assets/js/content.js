@@ -11,7 +11,8 @@ function insertImage() {
   document.body.style.backgroundColor = "black";
   document.body.style.color = "white";
   document.body.style.fontFamily = "Arial, sans-serif";
-  document.body.style.backgroundBlendMode = "dark-light";
+  // document.body.style.backgroundBlendMode = "hard-light";
+  console.log("Inserted image into body");
 }
 
 insertImage();
