@@ -43,6 +43,7 @@ function theme2(imageUrl) {
   background.style.zIndex = "-1";
   background.style.objectFit = "cover";
   background.style.objectPosition = "center";
-  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  background.style.opacity = "0.5";
+  document.body.style.backgroundColor = "rgba(0, 0, 0, 0)";
   document.body.appendChild(background);
 }
